@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gaze Tracking</title>
+</head>
+<body>
+    <h1>Gaze Tracking</h1>
+    <img src="{{ url_for('video_feed') }}" width="720" height="560">
+    <button onclick="callROI()">Call ROI Function</button>
+    <button onclick="stopTracking()">Stop Tracking</button>
+
+    <script>
+        function callROI() {
+            fetch('/roi')
+                .then(response => {
+                    if (response.redirected) {
+                        window.location.href = response.url;
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        function stopTracking() {
+            fetch('/stopTracking')
+                .then(response => {
+                    if (response.redirected) {
+                        window.location.href = response.url;
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</body>
+</html>
