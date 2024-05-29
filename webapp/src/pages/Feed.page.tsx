@@ -30,13 +30,7 @@ export function FeedPage() {
         }}
       >
         <div style={{ position: 'relative' }}>
-          <img
-            src="https://t4.ftcdn.net/jpg/00/97/58/97/360_F_97589769_t45CqXyzjz0KXwoBZT9PRaWGHRk5hQqQ.jpg"
-            alt="The head and torso of a dinosaur skeleton;
-          it has a large head with long sharp teeth"
-            height={500}
-            style={{}}
-          />
+          <img src="http://localhost:5555/video_feed" height={500} style={{}} />
           <Badge color={theme.colors.red[7]} style={{ position: 'absolute', right: 20, top: 20 }}>
             Analyse en cours
           </Badge>
